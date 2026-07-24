@@ -35,7 +35,7 @@ FONT_PATH = "C:/Windows/Fonts/trebucbd.ttf"
 
 SPACING = 10
 BANNER_HEIGHT = 140
-FOOTER_HEIGHT = 34
+FOOTER_HEIGHT = 0
 
 SMALL_COLS = 6
 SMALL_W = 237
@@ -59,7 +59,7 @@ SHADOW_ALPHA = 120
 
 FOOTER_BG = (255, 159, 28)
 FOOTER_BORDER = (5, 5, 5)
-FOOTER_TEXT = "MADE WITH PUMPKIN'S THUMB IT AVAILABLE ON GITHUB FREE"
+FOOTER_TEXT = ""
 FOOTER_TEXT_COLOUR = (245, 245, 245)
 FOOTER_TEXT_STROKE = (0, 0, 0)
 FOOTER_RADIUS = 11
@@ -726,6 +726,9 @@ def add_footer_to_existing_webp(webp_path: str, quality=80, duration_ms=None) ->
     Opens an animated/static WebP, appends the branded footer to every frame,
     then replaces the original file. Used for centerlongest_*.webp.
     """
+    if FOOTER_HEIGHT <= 0 or not (FOOTER_TEXT or "").strip():
+        return True
+
     try:
         if not webp_path or not os.path.isfile(webp_path):
             return False

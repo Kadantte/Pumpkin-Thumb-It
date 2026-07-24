@@ -183,24 +183,6 @@ The UI includes:
 
 ---
 
-# Branded Output Footer
-
-Generated thumbnail sheets include the centered orange footer:
-
-```text
-MADE WITH PUMPKIN'S THUMB IT AVAILABLE ON GITHUB FREE
-```
-
-Footer styling:
-
-```text
-Text:       white
-Background: #ff9f1c
-Alignment:  center
-```
-
----
-
 # GUI Features
 
 The app includes:
@@ -571,9 +553,6 @@ SUPPORTED_EXTENSIONS = (".mp4", ".m4v", ".mkv", ".mov", ".avi", ".wmv")
 LOGO_URL = "https://your-logo-url.png"
 LOGO_MAX_W_PX = 420
 LOGO_MAX_H_PX = 120
-
-FOOTER_BG = (255, 159, 28)
-FOOTER_TEXT = "MADE WITH PUMPKIN'S THUMB IT AVAILABLE ON GITHUB FREE"
 
 SKIP_EXISTING_OUTPUTS = True
 
