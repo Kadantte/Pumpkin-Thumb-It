@@ -24,6 +24,8 @@ Pumpkin's Thumb It v5 is still included in the Git repository for anyone who wan
 
 Pumpkin's Thumb It 5.1 is the updated version with the new layout, refreshed controls, and dark/lime Pumpkin theme.
 
+Both included versions now generate clean output images without the former orange promotional footer bar.
+
 ---
 
 # Overview
@@ -41,6 +43,7 @@ The app can generate:
 - Single preview screenshots
 - Automatic `/scr` output folders
 - Logo-branded thumbnail headers
+- No promotional footer or extra footer height
 - Media-info headers with video/audio details
 - ETA and elapsed-time tracking
 - Skip Existing output handling
@@ -146,6 +149,19 @@ VIDEO_FOLDER/
     |-- centerlongest_FOLDER.webp
     `-- screen.png
 ```
+
+## Clean Output Without a Promotional Footer
+
+The orange `MADE WITH PUMPKIN'S THUMB IT AVAILABLE ON GITHUB FREE` bar has been removed from all generated outputs.
+
+This applies to:
+
+- PNG thumbnail sheets
+- Animated WEBP thumbnail sheets
+- Center and longest-video previews
+- Single preview screenshots
+
+No footer height is reserved, so generated images end at the normal content boundary. Existing files are not modified automatically; regenerate them with **Skip Existing: OFF** to remove the footer from older outputs.
 
 ---
 
